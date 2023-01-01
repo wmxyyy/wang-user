@@ -1,4 +1,4 @@
-FROM openjdk8
+FROM registry-vpc.cn-shenzhen.aliyuncs.com/ygp/ygp-jdk:8u261
 MAINTAINER wang
 ENV LANG en_US.UTF-8
 COPY target/user-service-0.0.2-SNAPSHOT.jar /root/user-service.jar
