@@ -57,4 +57,10 @@ public class UserController {
         return Result.succeed(userDTO);
     }
 
+    @PostMapping("/healthCheck")
+    @ApiOperation("健康检查")
+    public Result<String> healthCheck(){
+        return Result.succeed("程序运行成功");
+    }
+
 }
