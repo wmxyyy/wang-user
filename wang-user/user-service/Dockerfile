@@ -1,7 +1,7 @@
-FROM registry-vpc.cn-shenzhen.aliyuncs.com/ygp/ygp-jdk:8u261
+FROM openjdk:8
 MAINTAINER wang
 ENV LANG en_US.UTF-8
-COPY target/user-service-0.0.2-SNAPSHOT.jar /root/user-service.jar
+COPY target/user-service-0.0.3-SNAPSHOT.jar /root/user-service.jar
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo 'Asia/Shanghai' >/etc/timezone
 CMD ["java","-jar","/root/user-service.jar"]
